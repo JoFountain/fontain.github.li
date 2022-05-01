@@ -1,0 +1,366 @@
+
+
+html { overflow-x: hidden; }
+p, span, em, a, address,h2, p {
+  color: #848586;
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.8em;
+    overflow-x: hidden;
+    overflow:hidden;
+    -webkit-backface-visibility: hidden;
+-webkit-perspective: 1000;
+-webkit-transform: translate3d(0,0,0);
+}
+
+
+a:hover, a.active { color: #309AFD; }
+.reveal-text {
+  display: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  margin-left:25vw;
+  color: #FF0000;
+}
+
+section:first-of-type {
+  animation: showup 7s infinite;
+}
+
+section:last-of-type {
+  width:0px;
+  animation: reveal 10s infinite;
+}
+
+section:last-of-type span {
+  margin-left:7px;
+  animation: slidein 7s infinite;
+  display: absolute;
+  overflow: hidden;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+.tm-site-header {
+    min-width: 25%;
+    min-height: 10%;
+    padding: 30px 300px 30px;
+}
+
+.about-text {
+    padding: 10px 40px;
+}
+.book-a-brew {
+  padding-right: 20px 40px;
+  position: absolute;
+  overflow: absolute;
+}
+
+a:hover, a.active { color: #309AFD; }
+
+.tm-btn {
+    padding: 10px 40px;
+    color: white;
+    background-color: #3299CD;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 1.rem;
+    transition: all 0.3s ease;
+}
+
+button.tm-btn {
+    padding: 15px 40px;
+}
+
+.tm-btn:hover {
+    color: white;
+    background-color: #49b4e9;
+}
+
+h1 { font-size: 3rem; }
+em { display: block; }
+div { box-sizing: border-box;}
+.tm-color-light-gray { color: #000000; }
+blockquote { margin: 0 0 30px 10px; }
+img { max-width: 100%; }
+.tm-page-title { font-size: 30px; }
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.tm-mt-0 { margin-top: 0; }
+
+
+
+.tm-tagline {
+    font-size: 1rem;
+    margin-left: 130px;
+}
+
+#tm-video-container {
+  max-width: 100vw;
+  max-height: auto;
+  padding: 0,0,0,0;
+      overflow: hidden;
+      background-color: #fff;
+      margin-bottom: 20px;
+      position: relative;
+}
+
+#tm-video {
+    width: 100%;
+    height: auto;
+}
+
+.tm-nav-item {
+    list-style: none;
+    margin: 22px;
+}
+
+.tm-nav-link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border: 1px solid #D2D3D4;
+    color: #999;
+    box-sizing: border-box;
+}
+
+.tm-nav-link:hover,
+.tm-nav-link.active {
+    color: #309AFD;
+}
+
+.tm-nav-link i {
+    margin-top: 30px;
+    color: #309AFD;
+}
+
+.tm-main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tm-container {
+    max-width: 1254px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto 135px;
+}
+
+.tm-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    font-size: 0.9em;
+}
+
+.tm-close-popup {
+    text-align: right;
+    display: block;
+}
+
+.tm-close-popup i {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tm-row {
+    display: flex;
+}
+
+@media (max-width: 850px) {
+    .tm-contact-row {
+        flex-direction: column;
+    }
+
+    .tm-contact-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .tm-contact-form {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tm-about-row {
+        flex-direction: column;
+    }
+    .tm-about-col {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 1264px) {
+    .tm-main-nav ul {
+        max-width: 976px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .tm-main-nav ul {
+        max-width: 732px;
+    }
+}
+
+@media (max-width: 776px) {
+    .tm-main-nav ul {
+        max-width: 488px;
+    }
+}
+
+@media (max-width: 532px) {
+    .tm-main-nav ul {
+        max-width: 244px;
+    }
+}
+
+@media (max-width: 992px) {
+    .tm-testimonial-row {
+        flex-wrap: wrap;
+    }
+    .tm-testimonial-col {
+        flex: 100%;
+        margin-bottom: 50px;
+    }
+
+    .tm-testimonial-col:last-child {
+        margin-bottom: 0;
+    }
+
+    .tm-testimonial-col-2 {
+        flex: 50%;
+    }
+}
+
+@media (max-width: 635px) {
+    .tm-testimonial-col-2 {
+        flex: 100%;
+    }
+}
+
+@media (max-width: 902px) {
+    .tm-gallery {
+        flex: 0 0 50%;
+    }
+    .tm-gallery-right {
+        flex: 0 0 38%;
+    }
+}
+
+@media (max-width: 805px) {
+    .tm-gallery-row {
+        flex-direction: column-reverse;
+    }
+    .tm-gallery {
+        flex: 0 0 100%;
+    }
+    .tm-gallery-right {
+        flex: 0 0 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .tm-gallery-right-inner {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .tm-gallery-links {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .tm-gallery-links li {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .tm-content-row {
+        flex-direction: column;
+    }
+
+    .tm-intro-col-l {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .tm-intro-row {
+        flex-direction: column;
+    }
+
+    .tm-intro-img {
+        max-width: 100%;
+        max-height: none;
+    }
+}
+
+@media (max-width: 540px) {
+    .tm-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 558px) {
+    .tm-site-header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .tm-tagline {
+        margin-left: 30px;
+    }
+}
