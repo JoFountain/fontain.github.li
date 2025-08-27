@@ -93,34 +93,38 @@ style="color: #FF3131;"> ☕ Book a Brew! (Free 30 minute consultation)</a></p>
     el.style.position = "absolute";
 
     el.addEventListener("mousedown", function(e) {
-      const shiftX = e.clientX - el.getBoundingClientRect().left;
-      const shiftY = e.clientY - el.getBoundingClientRect().top;
+      e.preventDefault(); // prevent image ghost dragging
+
+      const shiftX = e.clientX - el.offsetLeft;
+      const shiftY = e.clientY - el.offsetTop;
 
       function moveAt(pageX, pageY) {
         el.style.left = pageX - shiftX + "px";
         el.style.top = pageY - shiftY + "px";
       }
 
+      // move the element on mousemove
       function onMouseMove(event) {
         moveAt(event.pageX, event.pageY);
       }
 
       document.addEventListener("mousemove", onMouseMove);
 
-      el.onmouseup = function() {
+      // stop moving when mouse released
+      document.addEventListener("mouseup", function mouseUpHandler() {
         document.removeEventListener("mousemove", onMouseMove);
-        el.onmouseup = null;
-      };
+        document.removeEventListener("mouseup", mouseUpHandler);
+      });
     });
 
-    el.ondragstart = function() {
-      return false;
-    };
+    // prevent default HTML drag (ghost image)
+    el.ondragstart = () => false;
   });
 </script>
 
 </body>
 </html>
+
 
 
 
