@@ -1,33 +1,40 @@
 html { overflow-x: hidden; }
-p, span, em, a, address,h2, p {
-  color: #848586;
-    margin-top: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
 
+p, span, em, a, address, h2 {
+  color: #848586;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 body {
-  font-family: 'Hind', sans-serif;
+  font-family: 'Sora', sans-serif; /* switched to Sora */
   color: #000;
-  font-size: 10px;
+  font-size: 16px;   /* 10px was very small */
   line-height: 1.8em;
-  overflow-x: hidden;   /* keep this */
-  /* REMOVE: overflow:hidden; */
+  overflow-x: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0,0,0);
 }
 
-
-
 a:hover, a.active { color: #309AFD; }
+
+/* Portfolio header */
+#portfolio h2 {
+  font-family: 'Sora', sans-serif;
+  font-size: 2.5em;     /* ≈ 40px */
+  font-weight: 600;
+  color: #000;          /* make sure it's black */
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
 .reveal-text {
-  position: relative;   /* was display:absolute; */
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   text-align: center;
@@ -35,7 +42,6 @@ a:hover, a.active { color: #309AFD; }
   color: #FF0000;
 }
 
-/* If these were meant for the reveal-text section only: */
 .reveal-text:first-of-type {
   animation: showup 7s infinite;
 }
@@ -46,57 +52,55 @@ a:hover, a.active { color: #309AFD; }
 .reveal-text:last-of-type span {
   margin-left: 7px;
   animation: slidein 7s infinite;
-  position: relative;   /* was display:absolute; */
+  position: relative;
   overflow: hidden;
 }
 
-
 @keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
+  0% {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
 }
-
 @keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
+  0% { margin-left:-800px; }
+  20% { margin-left:-800px; }
+  35% { margin-left:0; }
+  100% { margin-left:0; }
+}
+@keyframes reveal {
+  0% {opacity:0;width:0;}
+  20% {opacity:1;width:0;}
+  30% {width:355px;}
+  80% {opacity:1;}
+  100% {opacity:0;width:355px;}
 }
 
-@keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:355px;}
-    80% {opacity:1;}
-    100% {opacity:0;width:355px;}
-}
 .tm-site-header {
-  padding: 20px 0;     /* let the .container handle the side padding */
+  padding: 20px 0;
 }
 
 .about-text {
-    padding: 10px 40px;
-    font-size: 10px;
-  }
+  padding: 10px 40px;
+  font-size: 14px;
+}
 .book-a-brew {
-  padding-right: 20px 40px;
+  padding-right: 20px;
   position: absolute;
-  overflow: absolute;
 }
 
-a:hover, a.active { color: #309AFD; }
-
 .tm-btn {
-    padding: 10px 40px;
-    color: white;
-    background-color: #3299CD;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    font-size: 1.rem;
-    transition: all 0.3s ease;
+  padding: 10px 40px;
+  color: white;
+  background-color: #3299CD;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.tm-btn:hover {
+  background-color: #49b4e9;
 }
 
 .container {
@@ -106,97 +110,69 @@ a:hover, a.active { color: #309AFD; }
 }
 
 button.tm-btn {
-    padding: 15px 40px;
-}
-
-.tm-btn:hover {
-    color: white;
-    background-color: #49b4e9;
+  padding: 15px 40px;
 }
 
 h1 { font-size: 3rem; }
 em { display: block; }
-div { box-sizing: border-box;}
-.tm-color-light-gray { color: #000000; }
+div { box-sizing: border-box; }
+.tm-color-light-gray { color: #000; }
 
 img { max-width: 100%; }
-.tm-page-title { font-size: 30px; margin-left:0;}
+.tm-page-title { font-size: 30px; margin-left:0; }
 
 body, ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .tm-mt-0 { margin-top: 0; }
-
-.tm-tagline {
-    font-size: 1rem;
-    margin-left:0;
-}
+.tm-tagline { font-size: 1rem; margin-left:0; }
 
 .tm-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
-    font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 0.9em;
 }
 
-.tm-row {
-    display: flex;
-}
-
-.column {
-  width: 100%;
-  float: left;
-}
+.tm-row { display: flex; }
+.column { width: 100%; float: left; }
 
 @media screen and (max-width: 1500px) {
-  .tm-site-header {
-        padding: 10px 10px 10px;
-  }
-  body {
-    background-color: #FFFFFF;
-  }
-
-
+  .tm-site-header { padding: 10px; }
 }
 
 @media screen and (max-width: 600px) {
-  .tm-site-header {
-        padding: 0.5px 10px 0.5px;
-       }
-        body {
-          background-color: #FFFFFF;
-        }
-  }
+  .tm-site-header { padding: 4px 10px; }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
   .gallery-grid { grid-template-columns: 1fr; }
 }
 
+/* Draggable Canvas */
 #draggable-canvas {
   width: 100%;
-  height: 560px;             /* more room than 400px */
+  height: 560px;
   position: relative;
   overflow: hidden;
   background: #f8f8f8;
-  border: 1px solid #eee;    /* optional, just to define the area */
+  border: 1px solid #eee;
 }
-
 .draggable {
   position: absolute;
   cursor: grab;
-  touch-action: none;        /* enables touch dragging on mobile */
-  user-select: none;         /* avoid text selection while dragging */
+  touch-action: none;
+  user-select: none;
   will-change: transform, left, top;
 }
-
 .draggable.dragging {
   cursor: grabbing;
-  z-index: 999;              /* ensure it stays above other pieces while dragging */
+  z-index: 999;
 }
 
-/* Remove the global img:hover … */
+/* Gallery hover */
 .gallery-grid img:hover {
   animation: shake 2s;
   animation-iteration-count: infinite;
