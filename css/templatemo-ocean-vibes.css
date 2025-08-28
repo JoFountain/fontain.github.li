@@ -125,14 +125,13 @@ body, ul { margin: 0; padding: 0; }
 }
 .hero-nav {
   display: flex;
-  gap: 20px; /* spacing between items */
+  align-items: right;
 }
 
 .hero-nav a {
-  font-size: 1.2rem; /* bigger text + decent icon size */
+  font-size: 1.6rem; /* bigger text + decent icon size */
   color: #111;
   text-decoration: none;
-  font-family: 'Sora', sans-serif;
   transition: color 0.3s ease;
 }
 
@@ -164,6 +163,7 @@ body, ul { margin: 0; padding: 0; }
 .draggable:active { cursor: grabbing; }
 
 /* (Removed the .gallery-grid img:hover shake since no keyframes are defined) */
+
 
 
 
