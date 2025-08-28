@@ -157,11 +157,15 @@ body, ul { margin: 0; padding: 0; }
 }
 .draggable:active { cursor: grabbing; }
 
-/* (Removed the .gallery-grid img:hover shake since no keyframes are defined) */
-
-.about-contact {
-  background: #fff; /* white version */
-  padding: 80px 20px;
+.about img,
+.contact img {
+  display: block;
+  margin: 30px auto;
+  width: 260px;
+  max-width: 100%;
+  border-radius: 12px; /* optional: soft corners */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1); /* subtle lift */
+  transform: none;
 }
 
 .two-col {
@@ -211,6 +215,7 @@ body, ul { margin: 0; padding: 0; }
     display: block;
   }
 }
+
 
 
 
