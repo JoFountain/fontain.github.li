@@ -164,6 +164,58 @@ body, ul { margin: 0; padding: 0; }
 
 /* (Removed the .gallery-grid img:hover shake since no keyframes are defined) */
 
+.about-contact {
+  background: #fff; /* white version */
+  padding: 80px 20px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.col h2 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.col p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.polaroid {
+  margin-top: 20px;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: rotate(-6deg);
+}
+
+.contact a {
+  color: #000;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile: stack columns */
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .polaroid {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
 
 
 
