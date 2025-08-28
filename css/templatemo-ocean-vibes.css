@@ -114,12 +114,24 @@ body, ul { margin: 0; padding: 0; }
   font-family: 'Sora', sans-serif;
 }
 .hero-logo img {
-  height: 50px;   /* adjust */
+  display: block;     /* removes any inline gap */
+  height: 50px;       /* adjust size to taste */
   width: auto;
-  display: block;
 }
-
-.hero-nav a { margin-left:28px; text-decoration:none; color:#111; }
+.hero-bar {
+  display: flex;
+  align-items: center;        /* vertically centers logo + nav */
+  justify-content: space-between;
+}
+.hero-nav {
+  display: flex;
+  gap: 28px;   /* space between links */
+}
+.hero-nav a {
+  text-decoration: none;
+  color: #111;
+  font-family: 'Sora', sans-serif;
+}
 .hero-nav a:hover { opacity:.7; }
 
 /* draggable stage */
@@ -142,6 +154,7 @@ body, ul { margin: 0; padding: 0; }
 .draggable:active { cursor: grabbing; }
 
 /* (Removed the .gallery-grid img:hover shake since no keyframes are defined) */
+
 
 
 
