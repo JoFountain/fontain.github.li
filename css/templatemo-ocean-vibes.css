@@ -184,6 +184,58 @@ body, ul {
   padding: 0 20px;    /* breathing space on small screens */
 }
 
+/* HERO */
+.hero {
+  position: relative;
+  height: 72vh;                 /* adjust 60–85vh to taste */
+  min-height: 420px;
+  overflow: hidden;
+  /* pink vertical stripes */
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #fdecef 0 60px,           /* light stripe */
+      #f7dfe4 60px 120px        /* darker stripe */
+    );
+}
+
+/* top bar */
+.hero-bar {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 18px 24px;
+  font-family: 'Sora', sans-serif;
+}
+.hero-logo { font-weight:700; letter-spacing:.02em; }
+.hero-logo i { color:#e11d48; font-style:normal; } /* the red I */
+.hero-nav a { margin-left:28px; text-decoration:none; color:#111; }
+.hero-nav a:hover { opacity:.7; }
+
+/* canvas area for draggables */
+.hero-stage {
+  position:relative;
+  height: calc(100% - 64px);    /* everything under the top bar */
+}
+
+/* contact block, bottom-right */
+.hero-contact {
+  position:absolute;
+  right: 24px; bottom: 24px;
+  text-align:right;
+  font-family: 'Sora', sans-serif;
+}
+.hero-contact .eyebrow {
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:12px;
+  margin-bottom:6px;
+}
+
+/* draggable images still work with your existing JS */
+.draggable {
+  position:absolute; left:0; top:0;
+  cursor:grab; user-select:none; touch-action:none;
+}
+.draggable:active { cursor:grabbing; }
 
 
 
