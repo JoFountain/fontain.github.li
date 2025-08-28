@@ -99,14 +99,11 @@ body, ul { margin: 0; padding: 0; }
 .site-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* HERO (no stripes) */
-.hero {
-  position: relative;
-  height: 72vh;
-  min-height: 420px;
-  overflow: hidden;
-  background: #fff; /* clean */
+.hero{
+  position:relative;
+  height:72vh; min-height:420px; overflow:hidden;
+  background:repeating-linear-gradient(90deg,#fdecef 0 60px,#f7dfe4 60px 120px);
 }
-
 /* top bar */
 .hero-bar {
   display: flex;
@@ -214,6 +211,7 @@ body, ul { margin: 0; padding: 0; }
     display: block;
   }
 }
+
 
 
 
