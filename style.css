@@ -1,0 +1,41 @@
+
+body {
+  background: #FFFFFF;
+}
+
+.archive__img {
+  width: 100%;
+}
+
+.archive__video {
+  width: 100%;
+}
+
+.section--top {
+  height: 100vw;
+}
+
+.img--textlogo {
+  width: 50vw;
+  height: 75px;
+  position: absolute;
+  top: 40px; left: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.img-fontainli-picture {
+  width: 88px;
+  height: 80px;
+top: 10px; centre: 10px; text-align: center;
+}
+.text--schpeil {
+position: absolute; top: 10px; right: 10px; text-align: right;
+}
+
+.archive__img{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
