@@ -28,7 +28,7 @@ a:hover, a.active { color: #309AFD; }
   font-size: 2em;     /* ≈ 45?px i think */
   font-weight: 700;      /* extra-bold */
   color: #000000;          /* make sure it's black */
-  text-align: center;
+  text-align: right;
   margin-bottom: 20px;
   letter-spacing: 0.05em;
 }
@@ -183,5 +183,6 @@ body, ul {
   margin: 0 auto;     /* center horizontally */
   padding: 0 20px;    /* breathing space on small screens */
 }
+
 
 
