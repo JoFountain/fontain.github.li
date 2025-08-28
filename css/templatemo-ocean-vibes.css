@@ -125,14 +125,24 @@ body, ul { margin: 0; padding: 0; }
 }
 .hero-nav {
   display: flex;
-  gap: 28px;   /* space between links */
+  gap: 20px; /* spacing between items */
 }
+
 .hero-nav a {
-  text-decoration: none;
+  font-size: 1.2rem; /* bigger text + decent icon size */
   color: #111;
+  text-decoration: none;
   font-family: 'Sora', sans-serif;
+  transition: color 0.3s ease;
 }
-.hero-nav a:hover { opacity:.7; }
+
+.hero-nav a:hover {
+  color: #e11d48; /* highlight on hover */
+}
+
+.hero-nav i {
+  font-size: 1.5rem; /* Instagram icon slightly larger */
+}
 
 /* draggable stage */
 .hero-stage { position:relative; height: calc(100% - 64px); }
@@ -154,6 +164,7 @@ body, ul { margin: 0; padding: 0; }
 .draggable:active { cursor: grabbing; }
 
 /* (Removed the .gallery-grid img:hover shake since no keyframes are defined) */
+
 
 
 
