@@ -5,192 +5,140 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Fontain.Li</title>
 
-  <style>
-  #portfolio h2 {
-    font-family: 'Sora', sans-serif;
-    font-size: 2em;    /* ~40px */
-    font-weight: 500;    /* semi-bold for emphasis */
-    letter-spacing: 0.02em; /* optional, gives breathing room */
-  }
-</style>
+  <!-- Sora for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Fonts -->
+  <style>
+    /* Portfolio heading */
+    #portfolio h2{
+      font-family:'Sora',sans-serif;
+      font-size:2em;
+      font-weight:600;
+      letter-spacing:.02em;
+      color:#000;
+      text-align:left; /* change to right/center if you prefer */
+      margin:0 20px 20px;
+    }
+
+    /* SITE WRAPPER: centers the main content */
+    .site-wrapper{max-width:1200px;margin:0 auto;padding:0 20px;}
+
+    /* HERO (striped) */
+    .hero{
+      position:relative;
+      height:72vh; min-height:420px; overflow:hidden;
+      background:repeating-linear-gradient(90deg,#fdecef 0 60px,#f7dfe4 60px 120px);
+    }
+    .hero-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;font-family:'Sora',sans-serif;}
+    .hero-logo{font-weight:700;letter-spacing:.02em;}
+    .hero-logo i{color:#e11d48;font-style:normal;}
+    .hero-nav a{margin-left:28px;text-decoration:none;color:#111;}
+    .hero-nav a:hover{opacity:.7;}
+    .hero-stage{position:relative;height:calc(100% - 64px);}
+    .hero-contact{position:absolute;right:24px;bottom:24px;text-align:right;font-family:'Sora',sans-serif;}
+    .hero-contact .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;margin-bottom:6px;}
+
+    /* Draggable items */
+    .draggable{position:absolute;left:0;top:0;cursor:grab;user-select:none;touch-action:none;}
+    .draggable:active{cursor:grabbing;}
+  </style>
+
+  <!-- your existing font/css links can stay -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="fontawesome/css/all.min.css" />
   <link rel="stylesheet" href="css/templatemo-ocean-vibes.css" />
-  
-  <style>
-    /* I'm going to comment this out for now as it's affecting the layout and is infuriating
-    img:hover {
-      animation: shake 2s;
-      animation-iteration-count: infinite;
-    }
-    @keyframes shake {
-      0% { transform: translate(1px, 1px) rotate(0deg); }
-      10% { transform: translate(-1px, -2px) rotate(-1deg); }
-      20% { transform: translate(-3px, 0px) rotate(1deg); }
-      30% { transform: translate(3px, 2px) rotate(0deg); }
-      40% { transform: translate(1px, -1px) rotate(1deg); }
-      50% { transform: translate(-1px, 2px) rotate(-1deg); }
-      60% { transform: translate(-3px, 1px) rotate(0deg); }
-      70% { transform: translate(3px, 1px) rotate(-1deg); }
-      80% { transform: translate(-1px, -1px) rotate(1deg); }
-      90% { transform: translate(1px, 2px) rotate(0deg); }
-      100% { transform: translate(1px, -2px) rotate(-1deg); }
-    }
- */
-  </style> 
-
 </head>
 
 <body>
- <!-- Full width draggable canvas -->
-  <div id="draggable-canvas" style="width:100%; height:400px; position:relative; overflow:hidden; background:#f8f8f8;">
-    <img src="Images/Draggable/flowertwo.png" class="draggable" style="width:240px; top:40px; left:40px;">
-    <img src="Images/Brand/fontainlicup.png" class="draggable" style="width:240px; top:40px; left:80px;">
-    <img src="Images/Draggable/flowerone.png" class="draggable" style="width:200px; top:120px; left:180px;">
-    <img src="Images/Draggable/flowerthree.png" class="draggable" style="width:300px; top:200px; left:300px;">
-  </div>
 
- <!-- Everything else inside site-wrapper -->
-  <div class="site-wrapper">
-    
-    <header class="tm-site-header">
-      <img src="Images/Brand/fontainli.png" alt="Fontain Li Logo" style="max-width:100%; height:auto;" />
-      <div class="tm-tagline tm-color-light-gray"></div>
-    </header>
+  <!-- HERO (full-bleed stripes + draggable art + contact) -->
+  <section class="hero" id="hero">
+    <div class="hero-bar site-wrapper">
+      <div class="hero-logo">FONTA<i>I</i>N LI</div>
+      <nav class="hero-nav">
+        <a href="#work">work</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
 
- 
+    <div class="hero-stage">
+      <!-- reuse your exact images/positions -->
+      <img src="Images/Draggable/flowertwo.png"   class="draggable" style="width:240px; top:40px;  left:40px;">
+      <img src="Images/Brand/fontainlicup.png"    class="draggable" style="width:240px; top:40px;  left:80px;">
+      <img src="Images/Draggable/flowerone.png"   class="draggable" style="width:200px; top:120px; left:180px;">
+      <img src="Images/Draggable/flowerthree.png" class="draggable" style="width:300px; top:200px; left:300px;">
 
-<!-- closing this off
-<section class="reveal-text">
-<span> <img src="img\bubble-up.png" align="left"
-  style="float:left; width: 125px; height:140px;"/></span></section>
-
-    <div class="tm-row">
-      <div class="column">
-        <div class="book-a-brew">
-          <a href="https://book.timify.com/?accountId=626bd30ff33cd1e1dac6a5a8&hideCloseButton=true" target="_blank" style="position:relative;">
-            <img alt="Dogs in teacups" src="Images/Brand/fontainlicup.png" style="float:right; width:300px;" />
-          </a>
-        </div>
+      <div class="hero-contact" id="contact">
+        <div class="eyebrow">Illustrator</div>
+        <div>T. (+44) 7492 220 200</div>
+        <a href="mailto:joanneolivia1@gmail.com">joanneolivia1@gmail.com</a>
       </div>
+    </div>
+  </section>
 
-      <div class="column">
-        <div text="about-text">
-          </br>
-    <p style="color:black; padding-right; font-size:1.5em; line-height:1.5em;"> :: UI/UX Consultant :: </br> :: Artist & Doodler :: </br> Joanne Olivia Fountain
-</br>T. (+44) 7492 220 200 <br>E. <a href="mailto:joanneolivia1@gmail.com" target="_blank">joanneolivia1@gmail.com</a>
-<br/><a href="https://www.instagram.com/fontain.li/">IG. @fontain.li💥</a><br/>
-<a href="https://book.timify.com/?accountId=626bd30ff33cd1e1dac6a5a8&hideCloseButton=true" target="Blank";
-style="color: #FF3131;"> ☕ Book a Brew! (Free 30 minute consultation)</a></p>
-  </div>
- </div>
-</div>
--->
-
-<script>
-  document.querySelectorAll(".draggable").forEach(el => {
-    el.style.position = "absolute";
-
-    function startDrag(e) {
-      e.preventDefault();
-
-      const startX = (e.touches ? e.touches[0].clientX : e.clientX) - el.offsetLeft;
-      const startY = (e.touches ? e.touches[0].clientY : e.clientY) - el.offsetTop;
-
-      function moveAt(pageX, pageY) {
-        el.style.left = pageX - startX + "px";
-        el.style.top = pageY - startY + "px";
-      }
-
-      function onMove(ev) {
-        const x = ev.touches ? ev.touches[0].clientX : ev.clientX;
-        const y = ev.touches ? ev.touches[0].clientY : ev.clientY;
-        moveAt(x, y);
-      }
-
-      function endDrag() {
-        document.removeEventListener("mousemove", onMove);
-        document.removeEventListener("mouseup", endDrag);
-        document.removeEventListener("touchmove", onMove);
-        document.removeEventListener("touchend", endDrag);
-      }
-
-      document.addEventListener("mousemove", onMove);
-      document.addEventListener("mouseup", endDrag);
-      document.addEventListener("touchmove", onMove);
-      document.addEventListener("touchend", endDrag);
-    }
-
-    el.addEventListener("mousedown", startDrag);
-    el.addEventListener("touchstart", startDrag);
-
-    el.ondragstart = () => false;
-  });
-</script>
-
- <!-- Portfolio Gallery Section -->
+  <!-- CENTERED CONTENT -->
+  <div class="site-wrapper">
     <section id="portfolio" style="padding:60px 0; background:#fff;">
-      <h2>Illustrations </h2>
+      <h2>Illustrations</h2>
 
-      <div class="gallery-grid" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; padding:0 20px;">
+      <div class="gallery-grid" style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px; padding:0 20px;">
         <a href="Images/Portfolio/stinkeye.png" target="_blank">
-          <img src="Images/Portfolio/stinkeye.png" alt="Stink Eye" style="width:100%; border-radius:12px;" />
+          <img src="Images/Portfolio/stinkeye.png" alt="Stink Eye" style="width:100%; border-radius:12px;">
         </a>
         <a href="Images/Portfolio/handbagsatdawns.png" target="_blank">
-          <img src="Images/Portfolio/handbagsatdawns.png" alt="Handbags at Dawn" style="width:100%; border-radius:12px;" />
+          <img src="Images/Portfolio/handbagsatdawns.png" alt="Handbags at Dawn" style="width:100%; border-radius:12px;">
         </a>
         <a href="Images/Portfolio/Untitled_Artwork 2.png" target="_blank">
-          <img src="Images/Portfolio/Untitled_Artwork 2.png" alt="Untitled Artwork 2" style="width:100%; border-radius:12px;" />
+          <img src="Images/Portfolio/Untitled_Artwork 2.png" alt="Untitled Artwork 2" style="width:100%; border-radius:12px;">
         </a>
         <a href="Images/Portfolio/everythingistemp.png" target="_blank">
-          <img src="Images/Portfolio/everythingistemp.png" alt="Everything is Temporary" style="width:100%; border-radius:12px;" />
+          <img src="Images/Portfolio/everythingistemp.png" alt="Everything is Temporary" style="width:100%; border-radius:12px;">
         </a>
       </div>
     </section>
 
-
-
-    <!-- Footer -->
     <footer class="tm-footer">
       <div class="container">
         <span>Copyright &copy; 2025 Joanne Olivia Fountain</span>
         <span>*This Business Card was designed by Fontain.li</span>
       </div>
     </footer>
+  </div>
 
-  </div> <!-- /site-wrapper -->  <!-- close wrapper here -->
-  
-  <!-- Scripts: load once, at the end -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-  <script>
-    $(function () {
-      $('.portfolio-item').magnificPopup({
-        type: 'image',
-        gallery: { enabled: true }
-      });
-    });
-  </script>
-
-  <!-- Your draggable code (external file) -->
-  <script src="js/draggable.js"></script>
-
-  <!-- jQuery first -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-
+<script>
+  document.querySelectorAll(".draggable").forEach(el => {
+    el.style.position = "absolute";
+    function startDrag(e){
+      e.preventDefault();
+      const sx = (e.touches?e.touches[0].clientX:e.clientX) - el.offsetLeft;
+      const sy = (e.touches?e.touches[0].clientY:e.clientY) - el.offsetTop;
+      function moveAt(x,y){ el.style.left = (x - sx) + "px"; el.style.top = (y - sy) + "px"; }
+      function onMove(ev){
+        const x = ev.touches?ev.touches[0].clientX:ev.clientX;
+        const y = ev.touches?ev.touches[0].clientY:ev.clientY;
+        moveAt(x,y);
+      }
+      function end(){ document.removeEventListener("mousemove", onMove);
+        document.removeEventListener("mouseup", end);
+        document.removeEventListener("touchmove", onMove);
+        document.removeEventListener("touchend", end);
+      }
+      document.addEventListener("mousemove", onMove);
+      document.addEventListener("mouseup", end);
+      document.addEventListener("touchmove", onMove);
+      document.addEventListener("touchend", end);
+    }
+    el.addEventListener("mousedown", startDrag);
+    el.addEventListener("touchstart", startDrag);
+    el.ondragstart = () => false;
+  });
+</script>
 </body>
-
 </html>
-
-
 
 
 
