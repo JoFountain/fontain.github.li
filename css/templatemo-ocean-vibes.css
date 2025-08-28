@@ -109,24 +109,22 @@ body, ul { margin: 0; padding: 0; }
 
 /* top bar */
 .hero-bar {
-  display:flex; align-items:center; justify-content:space-between;
+  display: flex;
+  align-items: center;        /* centers logo + nav vertically */
+  justify-content: space-between; /* logo left, nav far right */
   padding: 18px 24px;
   font-family: 'Sora', sans-serif;
 }
+
 .hero-logo img {
   display: block;     /* removes any inline gap */
   height: 30px;       /* adjust size to taste */
   width: auto;
 }
-.hero-bar {
-  display: flex;
-  align-items: center;        /* vertically centers logo + nav */
-  justify-content: space-between;
-}
+
 .hero-nav {
   display: flex;
-  align-items: right;
-}
+  gap: 20px;}
 
 .hero-nav a {
   font-size: 1.6rem; /* bigger text + decent icon size */
@@ -216,6 +214,7 @@ body, ul { margin: 0; padding: 0; }
     display: block;
   }
 }
+
 
 
 
