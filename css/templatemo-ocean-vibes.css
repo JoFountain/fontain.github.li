@@ -12,43 +12,44 @@ p, span, em, a, address,h2, p {
 }
 
 body {
-    font-family: 'Hind', sans-serif;
-    color: #000000;
-    font-size: 10px;
-    line-height: 1.8em;
-    overflow-x: hidden;
-    overflow:hidden;
-    -webkit-backface-visibility: hidden;
--webkit-perspective: 1000;
--webkit-transform: translate3d(0,0,0);
+  font-family: 'Hind', sans-serif;
+  color: #000;
+  font-size: 10px;
+  line-height: 1.8em;
+  overflow-x: hidden;   /* keep this */
+  /* REMOVE: overflow:hidden; */
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
 }
+
 
 
 a:hover, a.active { color: #309AFD; }
 .reveal-text {
-  display: absolute;
+  position: relative;   /* was display:absolute; */
   overflow: hidden;
   white-space: nowrap;
   text-align: center;
-  margin-left:25vw;
+  margin-left: 25vw;
   color: #FF0000;
 }
 
-section:first-of-type {
+/* If these were meant for the reveal-text section only: */
+.reveal-text:first-of-type {
   animation: showup 7s infinite;
 }
-
-section:last-of-type {
-  width:0px;
+.reveal-text:last-of-type {
+  width: 0;
   animation: reveal 10s infinite;
 }
-
-section:last-of-type span {
-  margin-left:7px;
+.reveal-text:last-of-type span {
+  margin-left: 7px;
   animation: slidein 7s infinite;
-  display: absolute;
+  position: relative;   /* was display:absolute; */
   overflow: hidden;
 }
+
 
 @keyframes showup {
     0% {opacity:0;}
@@ -72,11 +73,7 @@ section:last-of-type span {
     100% {opacity:0;width:355px;}
 }
 .tm-site-header {
-    min-width: 15%;
-    min-height: 100%;
-    padding: 30px 600px 30px;
-
-    overflow: hidden;
+  padding: 20px 0;     /* let the .container handle the side padding */
 }
 
 .about-text {
@@ -100,6 +97,12 @@ a:hover, a.active { color: #309AFD; }
     cursor: pointer;
     font-size: 1.rem;
     transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 button.tm-btn {
@@ -166,3 +169,35 @@ body, ul {
           background-color: #FFFFFF;
         }
   }
+
+  @media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+
+#draggable-canvas {
+  width: 100%;
+  height: 560px;             /* more room than 400px */
+  position: relative;
+  overflow: hidden;
+  background: #f8f8f8;
+  border: 1px solid #eee;    /* optional, just to define the area */
+}
+
+.draggable {
+  position: absolute;
+  cursor: grab;
+  touch-action: none;        /* enables touch dragging on mobile */
+  user-select: none;         /* avoid text selection while dragging */
+  will-change: transform, left, top;
+}
+
+.draggable.dragging {
+  cursor: grabbing;
+  z-index: 999;              /* ensure it stays above other pieces while dragging */
+}
+
+/* Remove the global img:hover … */
+.gallery-grid img:hover {
+  animation: shake 2s;
+  animation-iteration-count: infinite;
+}
