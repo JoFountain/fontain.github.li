@@ -10,14 +10,18 @@ p, span, em, a, address, h2 {
 }
 
 body {
-  font-family: 'Sora', sans-serif; /* switched to Sora */
+  font-family: 'Sora', sans-serif;
   color: #000;
-  font-size: 16px;   /* 10px was very small */
+  font-size: 16px;
   line-height: 1.8em;
   overflow-x: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0,0,0);
+
+  max-width: 1200px;   /* maximum width */
+  margin: 0 auto;      /* center the whole site */
+  padding: 0 20px;     /* some breathing space on the sides */
 }
 
 a:hover, a.active { color: #309AFD; }
@@ -177,3 +181,4 @@ body, ul {
   animation: shake 2s;
   animation-iteration-count: infinite;
 }
+
