@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="fontawesome/css/all.min.css" />
   <link rel="stylesheet" href="css/magnific-popup.css" />
   <link rel="stylesheet" href="css/templatemo-ocean-vibes.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
 
   <style>
     /* I'm going to comment this out for now as it's affecting the layout and is infuriating
@@ -80,11 +81,6 @@ style="color: #FF3131;"> ☕ Book a Brew! (Free 30 minute consultation)</a></p>
 </div>
 -->
 
-</div>
-    <footer class="tm-footer">
-        <span>Copyright &copy; 2024 Joanne Olivia Fountain</span>
-        <span>*This Business Card was designed by Fontain.li</span>
-</footer>
 <script>
   document.querySelectorAll(".draggable").forEach(el => {
     el.style.position = "absolute";
@@ -128,32 +124,23 @@ style="color: #FF3131;"> ☕ Book a Brew! (Free 30 minute consultation)</a></p>
 
 <!-- Portfolio Gallery Section -->
 <section id="portfolio" style="padding:40px 0; background:#fff;">
-  <h2 style="text-align:center; font-family:'Hind', sans-serif; margin-bottom:20px;">
-    Portfolio
-  </h2>
+  <h2 style="text-align:center; font-family:'Hind', sans-serif; margin-bottom:20px;">Portfolio</h2>
 
-      <div class="gallery-grid" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; padding:0 20px;">
-        <!-- Gallery items -->
-        <a href="Images/Portfolio/stinkeye.png" class="portfolio-item">
-          <img src="Images/Portfolio/stinkeye.png" alt="Stink Eye" style="width:100%; border-radius:12px;" />
-        </a>
-
-        <a href="Images/Portfolio/handbagsatdawns.png" class="portfolio-item">
-          <img src="Images/Portfolio/handbagsatdawns.png" alt="Handbags at Dawn" style="width:100%; border-radius:12px;" />
-        </a>
-
-        <a href="Images/Portfolio/Untitled_Artwork 2.png" class="portfolio-item">
-          <img src="Images/Portfolio/Untitled_Artwork 2.png" alt="Untitled Artwork 2" style="width:100%; border-radius:12px;" />
-        </a>
-
-        <a href="Images/Portfolio/everythingistemp.png" class="portfolio-item">
-          <img src="Images/Portfolio/everythingistemp.png" alt="Everything is Temporary" style="width:100%; border-radius:12px;" />
-        </a>
-      </div>
-    </div>
-  </section>
-
-
+  <div class="gallery-grid" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; padding:0 20px;">
+    <a href="Images/Portfolio/stinkeye.png">
+      <img src="Images/Portfolio/stinkeye.png" alt="Stink Eye" style="width:100%; border-radius:12px;" />
+    </a>
+    <a href="Images/Portfolio/handbagsatdawns.png">
+      <img src="Images/Portfolio/handbagsatdawns.png" alt="Handbags at Dawn" style="width:100%; border-radius:12px;" />
+    </a>
+    <a href="Images/Portfolio/Untitled_Artwork 2.png">
+      <img src="Images/Portfolio/Untitled_Artwork 2.png" alt="Untitled Artwork 2" style="width:100%; border-radius:12px;" />
+    </a>
+    <a href="Images/Portfolio/everythingistemp.png">
+      <img src="Images/Portfolio/everythingistemp.png" alt="Everything is Temporary" style="width:100%; border-radius:12px;" />
+    </a>
+  </div>
+</section>
 
 
   <!-- Footer -->
@@ -181,8 +168,30 @@ style="color: #FF3131;"> ☕ Book a Brew! (Free 30 minute consultation)</a></p>
 
   <!-- Your draggable code (external file) -->
   <script src="js/draggable.js"></script>
+
+  <!-- jQuery first -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+  <!-- Magnific Popup JS -->
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+
+
+  <!-- Init the lightbox -->
+<script>
+  $(function () {
+    $('.gallery-grid').magnificPopup({
+      delegate: 'a',        // target the <a> tags inside .gallery-grid
+      type: 'image',
+      gallery: { enabled: true },
+      image: { titleSrc: 'alt' }
+    });
+  });
+</script>
+
 </body>
 
 </html>
+
 
 
