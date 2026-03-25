@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fontain.Li</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Libraries -->
+  <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="css/templatemo-ocean-vibes.css" />
+
+  <!-- ✅ Your overrides -->
+ <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HERO (full-bleed stripes + draggable art + contact) -->
+  <section class="hero" id="hero">
+<div class="hero-bar site-wrapper">
+  <div class="hero-logo">
+    <img src="Images/Brand/fontainli.png" alt="Fontain.li logo">
+  </div>
+  <nav class="hero-nav">
+    <a href="https://www.instagram.com/boboandbubs_/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </nav>
+</div>
+    
+</div>
+    <div class="hero-stage">
+      <!-- reuse your exact images/positions -->
+     <img src="Images/Draggable/flowertwo.png" class="draggable" style="width:220px; top:110px; left:40%;">
+<img src="Images/Brand/fontainlicup.png" class="draggable" style="width:240px; top:260px; left:6%;">
+<img src="Images/Draggable/flowerone.png" class="draggable" style="width:170px; top:170px; left:28%;">
+<img src="Images/Draggable/flowerthree.png" class="draggable" style="width:280px; top:360px; left:42%;">
+<img src="Images/Draggable/girl_with_glass.png" class="draggable" style="width:300px; top:360px; left:30%;">
+<img src="Images/Draggable/make_me.png" class="draggable" style="width:110px; top:100px; left:34%;">
+</div>            <!-- ✅ close .hero-stage -->
+</section> 
+  
+<!-- GALLERY -->
+  <div class="site-wrapper">
+  <section id="portfolio" class="portfolio-section">
+    <h2>Work</h2>
+
+
+     <div class="card">
+  <img src="Images/Portfolio/handbagsatdawns.png" alt="Handbags at Dawn">
+</div>
+      
+      <div class="card">
+        <img src="Images/Portfolio/ah_vienna_full.png" alt="">
+      </div>
+
+      <div class="card">
+        <img src="Images/Portfolio/cartoon.png" alt="">
+      </div>
+      
+  <div class="card">
+        <img src="Images/Portfolio/fuckit.png" alt="">
+      </div>
+      
+      <div class="card">
+        <img src="Images/Portfolio/Untitled_Artwork 2.png" alt="">
+      </div>
+
+      <div class="card">
+        <img src="Images/Portfolio/heron_water_bird.png" alt="">
+      </div>
+
+      <div class="card">
+        <img src="Images/Portfolio/night_fall.png" alt="">
+      </div>
+
+      <div class="card">
+        <img src="Images/Portfolio/heads.png" alt="">
+      </div>
+
+      <div class="card">
+        <img src="Images/Portfolio/Herons_Haunt.png" alt="">
+      </div>
+      
+      <div class="card">
+        <img src="Images/Portfolio/everythingistemp.png" alt="">
+      </div>
+
+      <div class="card">
+        <img src="Images/Portfolio/Untitled_Artwork 4.png" alt="">
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT -->
+<section id="about" class="about-contact site-wrapper">
+  <div class="about-copy">
+    <p class="eyebrow"></p>
+    <h2>Let’s make something special</h2>
+    <p>
+      I create playful, thoughtful visual work through digital illustration, collage, and wordplay.
+      My practice explores unusual characters, interior worlds, and slightly absurd scenes.
+    </p>
+    <p>
+      Alongside illustration, I work in digital interaction design and UX research, bringing a strong
+      sense of story, structure, and audience into everything I make.
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:joanneolivia1@gmail.com">joanneolivia1@gmail.com</a>
+      <p>(+44) 7492 220 200</p>
+      <a class="cta-link" href="https://book.timify.com/?accountId=626bd30ff33cd1e1dac6a5a8&hideCloseButton=true" target="_blank">
+        ☕ Book a Brew
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  
+    <footer class="tm-footer">
+      <div class="container">
+        <span>Copyright &copy; 2025, Joanne Olivia Fountain</span>
+        <span>*I coded this, which is why it's a bit wonky</span>
+      </div>
+    </footer>
+
+<script>
+  document.querySelectorAll(".draggable").forEach(el => {
+    el.style.position = "absolute";
+    function startDrag(e){
+      e.preventDefault();
+      const sx = (e.touches?e.touches[0].clientX:e.clientX) - el.offsetLeft;
+      const sy = (e.touches?e.touches[0].clientY:e.clientY) - el.offsetTop;
+      function moveAt(x,y){ el.style.left = (x - sx) + "px"; el.style.top = (y - sy) + "px"; }
+      function onMove(ev){
+        const x = ev.touches?ev.touches[0].clientX:ev.clientX;
+        const y = ev.touches?ev.touches[0].clientY:ev.clientY;
+        moveAt(x,y);
+      }
+      function end(){ document.removeEventListener("mousemove", onMove);
+        document.removeEventListener("mouseup", end);
+        document.removeEventListener("touchmove", onMove);
+        document.removeEventListener("touchend", end);
+      }
+      document.addEventListener("mousemove", onMove);
+      document.addEventListener("mouseup", end);
+      document.addEventListener("touchmove", onMove);
+      document.addEventListener("touchend", end);
+    }
+    el.addEventListener("mousedown", startDrag);
+    el.addEventListener("touchstart", startDrag);
+    el.ondragstart = () => false;
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

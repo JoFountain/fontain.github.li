@@ -1,0 +1,44 @@
+/* ===== ABOUT (one image, text right) ===== */
+#about { padding: 80px 0; background:#fff; color:#000; }
+
+/* layout */
+#about .row{
+  display:grid;
+  grid-template-columns: min(420px, 40vw) 1fr; /* image left, text right */
+  gap:48px;
+  align-items:center;
+}
+
+/* media */
+#about .media img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:0; box-shadow:none; border-radius:0;
+}
+
+/* copy */
+#about .copy h2{
+  font-family:'Sora', sans-serif;
+  font-weight:800;
+  font-size:2.4rem;
+  line-height:1.05;
+  margin:0 0 12px;
+  color:#000;
+}
+#about .copy h2 span{ font-weight:800; }
+#about .copy p{
+  margin:0 0 14px;
+  line-height:1.7;
+  color:#000;
+}
+#about .copy a{ color:#000; text-decoration:none; }
+#about .copy a:hover{ color:#e11d48; }
+
+/* mobile */
+@media (max-width:768px){
+  #about .row{ grid-template-columns:1fr; gap:24px; align-items:start; }
+  #about .media{ max-width:520px; margin:0 auto; }
+  #about .copy h2{ font-size:2rem; }
+}
+
