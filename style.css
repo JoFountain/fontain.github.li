@@ -66,7 +66,7 @@ li {
   min-height: 100vh;
   overflow: hidden;
   background:
-     repeating-linear-gradient(
+    repeating-linear-gradient(
       to bottom,
       rgba(255, 182, 193, 0.18) 0,
       rgba(255, 182, 193, 0.18) 1px,
@@ -173,8 +173,9 @@ li {
   background: rgba(255, 255, 255, 0.35);
 }
 
-
-/* portfolio */
+/* =========================
+   PORTFOLIO
+========================= */
 
 .portfolio-section {
   padding: 72px 0;
@@ -210,24 +211,40 @@ li {
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  max-width: 760px;
-  margin: 0 auto;
+  gap: 40px;
 }
 
-.card {
-  position: relative;
-  width: 100%;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.card,
+.portfolio-card {
+  max-width: 700px;
+  margin: 0 auto;
   background: #f3efec;
   border-radius: 18px;
-  overflow: hidden;
   padding: 20px;
 }
 
-.card img {
+.card img,
+.portfolio-card img {
   width: 100%;
   display: block;
   border-radius: 12px;
+  margin: 0;
+}
+
+.card img,
+.portfolio-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.card img {
   transition: transform 0.3s ease;
 }
 
@@ -253,27 +270,12 @@ li {
 }
 
 .card:hover img {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 .card:hover .card-overlay {
   opacity: 1;
   transform: translateY(0);
-}
-/* =========================
-   OPTIONAL PORTFOLIO CARD STYLES
-========================= */
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.portfolio-card img {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
 }
 
 .portfolio-meta {
@@ -301,6 +303,9 @@ li {
   opacity: 0.7;
 }
 
+.portfolio-section {
+  padding: 100px 0;
+}
 /* =========================
    ABOUT / CONTACT
 ========================= */
@@ -362,10 +367,6 @@ li {
    RESPONSIVE
 ========================= */
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 900px) {
   .hero-copy {
     position: relative;
@@ -377,6 +378,7 @@ li {
 
   .gallery-grid,
   .portfolio-grid {
+    max-width: 100%;
     grid-template-columns: 1fr;
   }
 }
